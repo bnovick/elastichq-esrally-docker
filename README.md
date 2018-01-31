@@ -1,13 +1,13 @@
 # Dockerized ElasticHQ
 
-Simple Docker build for [ElasticHQ](https://github.com/royrusso/elasticsearch-HQ) using Alpine Linux and NGINX.
+Simple Docker build based on [ElasticHQ](https://github.com/royrusso/elasticsearch-HQ) using Alpine Linux and NGINX.
 
 # Running
 
 With docker-compose it's a very simple process.
 
 ```bash
-git clone https://github.com/myENA/elastichq-docker
+git clone
 cd elastichq-docker
 docker-compose up -d
 ```
