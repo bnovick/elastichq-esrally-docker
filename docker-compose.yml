@@ -1,11 +1,19 @@
-elastic-hq:
-  build: .
-  restart: always
-  expose:
-    - 80
-  environment:
-    SERVICE_NAME: elastic-hq
-    SERVICE_TAGS: proxy-standard
-    SERVICE_CHECK_HTTP: /package.json
-    SERVICE_CHECK_INTERVAL: 20s
-    SERVICE_CHECK_TIMEOUT: 5s
+version: "2.0"
+services:
+  elastic-hq:
+    build: .
+    restart: always
+    ports:
+      - "8081:80"
+    environment:
+      SERVICE_NAME: elastic-hq
+      SERVICE_TAGS: proxy-standard
+      SERVICE_CHECK_HTTP: /package.json
+      SERVICE_CHECK_INTERVAL: 20s
+      SERVICE_CHECK_TIMEOUT: 5s
+#  elastic-rally:
+#    build: ./esrally/.
+#    command: /bin/bash
+#    tty: true
+#    ports:
+#      - "9000"
